@@ -58,7 +58,36 @@ document.addEventListener('click', (e) => {
     const navMenu = document.getElementById("navMenu");
     const hamburger = document.querySelector(".hamburger");
     
-    if (!navMenu.contains(e.target) && !hamburger.contains(e.target) && navMenu.classList.contains("active")) {
+    if (navMenu && hamburger && !navMenu.contains(e.target) && !hamburger.contains(e.target) && navMenu.classList.contains("active")) {
         navMenu.classList.remove("active");
     }
 });
+
+// THEME TOGGLE
+const themeToggle = document.getElementById("theme-toggle");
+const htmlElement = document.documentElement;
+const themeIcon = themeToggle.querySelector("i");
+
+// Check local storage for theme
+const savedTheme = localStorage.getItem("theme") || "dark";
+htmlElement.setAttribute("data-theme", savedTheme);
+updateThemeIcon(savedTheme);
+
+themeToggle.addEventListener("click", () => {
+    const currentTheme = htmlElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    
+    htmlElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+    updateThemeIcon(newTheme);
+});
+
+function updateThemeIcon(theme) {
+    if (theme === "dark") {
+        themeIcon.classList.remove("fa-sun");
+        themeIcon.classList.add("fa-moon");
+    } else {
+        themeIcon.classList.remove("fa-moon");
+        themeIcon.classList.add("fa-sun");
+    }
+}
