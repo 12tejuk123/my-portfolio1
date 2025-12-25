@@ -3,56 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details</title>
+    <title>Ayushya AI | Project</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-     <section id="hero">
-        <img src="../Ayushya image.jpg" alt="Ayushya Image" class="Ayushya-AI-image">
-        <div class="hero-content">
-    
+
+    <!-- NAVBAR -->
     <nav class="navbar glass">
-        <div class="logo">Tejaswini</div>
-        <a href="../index.html" class="back-btn">⬅ Back to Portfolio</a>
+        <a href="../index.html" class="logo">Tejaswini Kulkarni</a>
+        
+        <div class="nav-content">
+            <a href="../index.html" class="back-link" style="margin-bottom: 0;">&larr; Back to Portfolio</a>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
     </nav>
 
-    <section class="project-detail glass">
-        <h1 class="project-title">Ayushya AI — AI Doctor App</h1>
+    <div class="project-wrapper">
+        <div class="project-header">
+            <h1 class="project-title-large">Ayushya AI</h1>
+            <p class="project-text" style="max-width: 600px; margin: 0 auto;">Personal AI Doctor assistant for symptom analysis and health guidance.</p>
+        </div>
 
-        <p class="project-desc">
-           🏥  Ayushya AI — AI Doctor App<br>
-⭐ Overview
-<br>
-A health assistant where users describe symptoms → AI gives possible conditions + remedies.
-<br>
-⭐ Features
-<br>
-AI diagnosis using symptom analysis
-<br>
-Medicine & home remedy suggestions
-<br>
-Emergency alert info
-<br>
-Daily health tips
-<br>
-Chatbot-style medical assistant
-<br>
-🔧 Technologies
-<br>
-Medical dataset
-<br>
-AI NLP
-<br>
-HTML/CSS UI
-<br>
-🎯 Purpose
-<br>
-Help the public receive quick primary health guidance..
-        </p>
+        <img src="../Ayushya image.jpg" alt="Ayushya AI Project" class="project-img-large">
 
-        <h3>Technologies Used</h3>
-        <p>HTML, CSS, JavaScript, Python, AI Models, Firebase, etc.</p>
-    </section>
+        <div class="project-content-box">
+            <h3 class="project-section-header">Overview</h3>
+            <p class="project-text">
+                Ayushya AI is a smart health assistant where users can describe their symptoms, and the AI analyzes the input to suggest possible conditions and home remedies. It serves as a first-response medical guide for immediate assistance.
+            </p>
 
+            <h3 class="project-section-header">Key Features</h3>
+            <ul class="project-text" style="list-style-position: inside; margin-bottom: 30px;">
+                <li>AI diagnosis using advanced symptom analysis</li>
+                <li>Medicine and home remedy suggestions</li>
+                <li>Chatbot-style interactive medical assistant</li>
+                <li>Emergency alert information</li>
+                <li>Daily health tips and wellness tracking</li>
+            </ul>
+
+            <h3 class="project-section-header">Technologies Used</h3>
+            <div class="tech-stack-list">
+                <span class="tech-badge">AI / NLP Models</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Medical Datasets</span>
+                <span class="tech-badge">HTML/CSS/JS</span>
+            </div>
+
+            <h3 class="project-section-header">Purpose</h3>
+            <p class="project-text">
+                To provide the public with quick, accessible primary health guidance and reduce anxiety during medical uncertainty.
+            </p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Tejaswini Kulkarni. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>

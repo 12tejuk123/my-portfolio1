@@ -3,57 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details</title>
+    <title>Vertical Farming | Project</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar glass">
-        <div class="logo">Tejaswini</div>
-        <a href="../index.html" class="back-btn">⬅ Back to Portfolio</a>
+        <a href="../index.html" class="logo">Tejaswini Kulkarni</a>
+        
+        <div class="nav-content">
+            <a href="../index.html" class="back-link" style="margin-bottom: 0;">&larr; Back to Portfolio</a>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
     </nav>
 
-    <section class="project-detail glass">
-        <h1 class="project-title">Project Name Here</h1>
+    <div class="project-wrapper">
+        <div class="project-header">
+            <h1 class="project-title-large">Smart Vertical Farming</h1>
+            <p class="project-text" style="max-width: 600px; margin: 0 auto;">Winner of DIPEX Competition - AI & IoT powered sustainable agriculture.</p>
+        </div>
 
-        <p class="project-desc">
-         🌱  Smart Vertical Farming System<br>
-✅ Overview<br>
+        <img src="../Types-of-hydroponic-systems-01.png" alt="Vertical Farming System" class="project-img-large">
 
-A DIPEX-winning smart farming project using AI + IoT + renewable energy.<br>
+        <div class="project-content-box">
+            <h3 class="project-section-header">Overview</h3>
+            <p class="project-text">
+                An award-winning smart vertical farming system that integrates AI, IoT, and renewable energy to optimize crop growth. It ensures sustainable agriculture with minimal human intervention.
+            </p>
 
-⭐ Features<br>
+            <h3 class="project-section-header">Key Features</h3>
+            <ul class="project-text" style="list-style-position: inside; margin-bottom: 30px;">
+                <li>Automated irrigation using moisture sensors</li>
+                <li>Real-time temperature & humidity monitoring</li>
+                <li>AI-driven crop health analysis</li>
+                <li>Nutrient and water requirement prediction</li>
+                <li>Solar-powered independent setup</li>
+            </ul>
 
-Automated irrigation (moisture sensors)<br>
+            <h3 class="project-section-header">Technologies Used</h3>
+            <div class="tech-stack-list">
+                <span class="tech-badge">Arduino / ESP32</span>
+                <span class="tech-badge">IoT Sensors</span>
+                <span class="tech-badge">Python AI</span>
+                <span class="tech-badge">Solar Tech</span>
+            </div>
 
-Temperature & humidity monitoring<br>
+            <h3 class="project-section-header">Purpose</h3>
+            <p class="project-text">
+                To promote sustainable, high-yield agriculture in urban environments with low resource consumption.
+            </p>
+        </div>
+    </div>
 
-Solar-powered setup<br>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Tejaswini Kulkarni. All rights reserved.</p>
+    </footer>
 
-AI crop health check<br>
-
-Nutrient and water prediction<br>
-
-Mobile dashboard<br>
-
-🔧 Tech Stack<br>
-
-Arduino/ESP32<br>
-
-Sensors (DHT11, moisture, light)<br>
-
-Python AI for crop insights<br>
-
-IoT dashboard<br>
-
-🎯 Purpose<Br>
-
-Sustainable agriculture with low human intervention
-        </p>
-
-        <h3>Technologies Used</h3>
-        <p>HTML, CSS, JavaScript, Python, AI Models, Firebase, etc.</p>
-    </section>
-
+    <script src="../script.js"></script>
 </body>
 </html>

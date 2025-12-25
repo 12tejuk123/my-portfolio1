@@ -3,50 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details</title>
+    <title>Smart Waste Bin | Project</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar glass">
-        <div class="logo">Tejaswini</div>
-        <a href="../index.html" class="back-btn">⬅ Back to Portfolio</a>
+        <a href="../index.html" class="logo">Tejaswini Kulkarni</a>
+        
+        <div class="nav-content">
+            <a href="../index.html" class="back-link" style="margin-bottom: 0;">&larr; Back to Portfolio</a>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
     </nav>
 
-    <section class="project-detail glass">
-        <h1 class="project-title">Project Name Here</h1>
+    <div class="project-wrapper">
+        <div class="project-header">
+            <h1 class="project-title-large">Smart Waste Bin</h1>
+            <p class="project-text" style="max-width: 600px; margin: 0 auto;">IoT-enabled waste management automation.</p>
+        </div>
 
-        <p class="project-desc">
-             🗑️ Smart Waste Bin — IoT Automatic System<br>
-✅ Overview
-<br>
-A smart bin that uses sensors to detect waste levels and notify authorities.
-<br>
-⭐ Features
-<br>
-Ultrasonic waste level detection
-<br>
-Automatic lid opening (optional)
-<br>
-IoT alert system (LED, buzzer, SMS)
-<br>
-🔧 Tech Stack<br>
+        <div style="text-align: center; margin-bottom: 50px; padding: 40px; background: rgba(255,255,255,0.05); border-radius: 30px; border: 1px solid var(--glass-border);">
+            <i class="fas fa-trash-can-arrow-up" style="font-size: 8rem; color: var(--secondary);"></i>
+        </div>
 
-Arduino/NodeMCU<br>
+        <div class="project-content-box">
+            <h3 class="project-section-header">Overview</h3>
+            <p class="project-text">
+                A smart waste management system that utilizes sensors to monitor waste levels and automate disposal processes. It ensures timely collection and better hygiene in public spaces.
+            </p>
 
-Ultrasonic sensor<br>
+            <h3 class="project-section-header">Key Features</h3>
+            <ul class="project-text" style="list-style-position: inside; margin-bottom: 30px;">
+                <li>Ultrasonic waste level detection</li>
+                <li>Automatic lid opening mechanism</li>
+                <li>IoT alert system (LEDs, Buzzer, SMS notifications)</li>
+                <li>Real-time status monitoring</li>
+            </ul>
 
-Buzzer/LED indicators<br>
+            <h3 class="project-section-header">Technologies Used</h3>
+            <div class="tech-stack-list">
+                <span class="tech-badge">Arduino / NodeMCU</span>
+                <span class="tech-badge">Ultrasonic Sensors</span>
+                <span class="tech-badge">IoT (Blynk/MQTT)</span>
+                <span class="tech-badge">C++</span>
+            </div>
 
-IoT messaging (Blynk/MQTT)<br>
+            <h3 class="project-section-header">Purpose</h3>
+            <p class="project-text">
+                To automate smart city maintenance and maintain public cleanliness through efficient waste management.
+            </p>
+        </div>
+    </div>
 
-🎯 Purpose<br>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Tejaswini Kulkarni. All rights reserved.</p>
+    </footer>
 
-Smart city automation to maintain public cleanliness.</p>
-
-        <h3>Technologies Used</h3>
-        <p>HTML, CSS, JavaScript, Python, AI Models, Firebase, etc.</p>
-    </section>
-
+    <script src="../script.js"></script>
 </body>
 </html>

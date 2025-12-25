@@ -3,54 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details</title>
+    <title>DreamAI | Project</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar glass">
-        <div class="logo">Tejaswini</div>
-        <a href="../index.html" class="back-btn">⬅ Back to Portfolio</a>
+        <a href="../index.html" class="logo">Tejaswini Kulkarni</a>
+        
+        <div class="nav-content">
+            <a href="../index.html" class="back-link" style="margin-bottom: 0;">&larr; Back to Portfolio</a>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
     </nav>
 
-    <section class="project-detail glass">
-        <h1 class="project-title">DreamAI — AI Dream Analyzer</h1>
+    <div class="project-wrapper">
+        <div class="project-header">
+            <h1 class="project-title-large">DreamAI</h1>
+            <p class="project-text" style="max-width: 600px; margin: 0 auto;">AI-powered dream analysis and interpretation assistant.</p>
+        </div>
 
-        <p class="project-desc">
-            🌙  DreamAI — AI Dream Analyzer<br>
-✅ Overview<br>
+        <div style="text-align: center; margin-bottom: 50px; padding: 40px; background: rgba(255,255,255,0.05); border-radius: 30px; border: 1px solid var(--glass-border);">
+            <i class="fas fa-cloud-moon" style="font-size: 8rem; color: var(--accent);"></i>
+        </div>
 
-DreamAI is an AI-powered dream interpretation app that reads the user’s dream and generates psychological + symbolic meaning.
-<br>
-⭐ Features<br>
+        <div class="project-content-box">
+            <h3 class="project-section-header">Overview</h3>
+            <p class="project-text">
+                DreamAI is an innovative application that interprets user dreams using advanced Natural Language Processing. It generates psychological and symbolic meanings to help users understand their subconscious mind.
+            </p>
 
-Dream text input → AI interpretation
-<br>
-Conversation-style chatbot
-<br>
-Save dream history
-<br>
-Voice-to-text dream recording
-<br>
-Personalized dream warnings & meanings
-<br>
-🔧 Technologies Used
-<br>
-NLP APIs (OpenAI, Gemini)
-<br>
-HTML/CSS/JS
-<Br>
-Python / Node.js backend
-<Br>
-🎯 Purpose
-<Br>
-To help users understand the meaning behind their dreams and track patterns in their subconscious.
-        </p>
+            <h3 class="project-section-header">Key Features</h3>
+            <ul class="project-text" style="list-style-position: inside; margin-bottom: 30px;">
+                <li>Dream text input analysis & interpretation</li>
+                <li>Conversation-style chatbot for deeper exploration</li>
+                <li>Voice-to-text dream recording</li>
+                <li>Dream history tracking and pattern recognition</li>
+                <li>Personalized dream warnings and insights</li>
+            </ul>
 
-       
-        <h3>Technologies Used</h3>
-        <p>HTML, CSS, JavaScript, Python, AI Models, Firebase, etc.</p>
-    </section>
+            <h3 class="project-section-header">Technologies Used</h3>
+            <div class="tech-stack-list">
+                <span class="tech-badge">NLP APIs (OpenAI / Gemini)</span>
+                <span class="tech-badge">Node.js / Python Backend</span>
+                <span class="tech-badge">HTML/CSS/JS</span>
+                <span class="tech-badge">Speech Recognition API</span>
+            </div>
 
+            <h3 class="project-section-header">Purpose</h3>
+            <p class="project-text">
+                To help users decode the meanings behind their dreams and track recurring subconscious patterns for better self-awareness.
+            </p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Tejaswini Kulkarni. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>
