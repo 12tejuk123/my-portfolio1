@@ -65,6 +65,11 @@
     scroll-behavior: smooth;
 }
 
+html {
+    background-color: var(--bg-main);
+    transition: background-color 0.4s ease;
+}
+
 body {
     background-color: var(--bg-main);
     color: var(--text-main);
@@ -1826,34 +1831,59 @@ footer {
    RESPONSIVE DESIGN
 ====================================== */
 @media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        top: 75px;
-        right: 0;
-        background: rgba(255,255,255,0.15);
-        backdrop-filter: blur(10px);
-        padding: 20px;
-        width: 200px;
-        display: none;
-        flex-direction: column;
-        border-radius: 10px;
+    .nav-content {
+        gap: 15px;
     }
 
+    .nav-links {
+        position: fixed; /* Fixed to cover screen or be a drawer */
+        top: 80px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--nav-bg);
+        backdrop-filter: blur(20px);
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transform: translateX(100%); /* Hidden by default */
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+        box-shadow: none;
+    }
+
+    .nav-links.active {
+        transform: translateX(0); /* Visible */
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    }
+
+    /* Ensure hamburger is visible */
     .hamburger {
         display: block;
+        z-index: 1001; /* Above menu */
     }
 
     #hero {
         flex-direction: column;
         text-align: center;
+        padding-top: 50px;
     }
 
     .profile-img {
+        width: 280px;
+        height: 280px;
         margin-bottom: 20px;
     }
 
     .contact-container {
         grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2rem;
     }
 }
 
