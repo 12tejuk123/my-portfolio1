@@ -1719,18 +1719,35 @@ section {
 }
 
 .skill-item {
-    background: rgba(255,255,255,0.20);
+    background: var(--card-bg);
     backdrop-filter: blur(14px);
     padding: 25px;
     text-align: center;
     border-radius: 20px;
+    border: 1px solid var(--card-border);
     transition: 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.skill-item h4 {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    margin: 10px 0 5px 0;
+    font-weight: 600;
+}
+
+.skill-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
 }
 
 .skill-item:hover {
     transform: translateY(-8px) scale(1.04);
     box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    border-color: var(--primary);
 }
 
 .skill-icon {
