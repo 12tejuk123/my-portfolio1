@@ -776,6 +776,17 @@ footer {
 }
 
 
+
+
+/* ======================================
+   NAVBAR CONTENT GROUPING
+====================================== */
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 .nav-links {
     display: flex;
     gap: 35px;
@@ -792,6 +803,96 @@ footer {
 .nav-links a:hover, .nav-links a.active {
     color: var(--text-main);
 }
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--primary);
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 0;
+    transition: transform 0.3s;
+}
+.dark-mode-toggle:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+/* ======================================
+   RESPONSIVE DESIGN
+====================================== */
+@media (max-width: 1024px) {
+    .nav-content {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-content {
+        gap: 15px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--nav-bg);
+        backdrop-filter: blur(20px);
+        padding: 40px;
+        display: flex; /* Hidden by default state logic usually, or we use a class to toggle visibility */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%); /* Slide out by default */
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
 
 .nav-links a::after {
     content: '';
