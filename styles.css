@@ -4,27 +4,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-    /* Default Dark Mode Theme (Deep Space) */
-    --bg-main: #050505;
-    --bg-secondary: #0a0a0a;
-    --primary: #8b5cf6; /* Violet */
-    --primary-glow: rgba(139, 92, 246, 0.4);
-    --secondary: #06b6d4; /* Cyan */
-    --secondary-glow: rgba(6, 182, 212, 0.4);
-    --accent: #ec4899; /* Pink */
+    /* Modern Professional Dark Theme */
+    --bg-main: #0F172A;
+    --bg-secondary: #1E293B;
+    --primary: #5B8DEF;
+    --primary-glow: rgba(91, 141, 239, 0.3);
+    --secondary: #10B981;
+    --secondary-glow: rgba(16, 185, 129, 0.3);
+    --accent: #F59E0B;
     
-    --text-main: #ffffff;
-    --text-secondary: #cbd5e1;
-    --text-muted: #94a3b8;
+    --text-main: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64738B;
     
-    --glass-bg: rgba(20, 20, 22, 0.4);
-    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-bg: rgba(30, 41, 59, 0.5);
+    --glass-border: rgba(148, 163, 184, 0.2);
     --glass-shadow: rgba(0, 0, 0, 0.3);
     
-    --nav-bg: rgba(5, 5, 5, 0.85);
+    --nav-bg: rgba(15, 23, 42, 0.9);
     
-    --card-bg: rgba(40, 40, 50, 0.5);
-    --card-border: rgba(255, 255, 255, 0.12);
+    --card-bg: rgba(30, 41, 59, 0.6);
+    --card-border: rgba(148, 163, 184, 0.25);
     
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -39,7 +39,7 @@
     --font-2xl: 2.2rem;
     --font-3xl: 2.8rem;
     --font-4xl: 3.5rem;
-    --font-hero: 4rem;
+    --font-hero: 4.5rem;
     
     /* Spacing Scale */
     --spacing-xs: 8px;
@@ -51,8 +51,8 @@
     
     /* Border Radius Scale */
     --radius-sm: 10px;
-    --radius-md: 18px;
-    --radius-lg: 30px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
     --radius-pill: 50px;
     --radius-round: 50%;
     
@@ -61,30 +61,46 @@
     --transition-base: 0.3s ease;
     --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #5B8DEF, #10B981);
+    --gradient-accent: linear-gradient(135deg, #F59E0B, #EF4444);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0 0 24px var(--primary-glow);
 }
 
 [data-theme="light"] {
-    /* Light Mode Theme (Crisp Day) */
-    --bg-main: #f0f2f5;
-    --bg-secondary: #ffffff;
-    --primary: #6366f1; /* Indigo */
-    --primary-glow: rgba(99, 102, 241, 0.25);
-    --secondary: #14b8a6; /* Teal */
-    --secondary-glow: rgba(20, 184, 166, 0.25);
-    --accent: #f43f5e; /* Rose */
+    /* Clean Professional Light Theme */
+    --bg-main: #FFFFFF;
+    --bg-secondary: #F8FAFC;
+    --primary: #2563EB;
+    --primary-glow: rgba(37, 99, 235, 0.25);
+    --secondary: #059669;
+    --secondary-glow: rgba(5, 150, 105, 0.25);
+    --accent: #D97706;
     
-    --text-main: #1e293b;
-    --text-secondary: #334155;
-    --text-muted: #64748b;
+    --text-main: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
     
-    --glass-bg: rgba(255, 255, 255, 0.75);
-    --glass-border: rgba(0, 0, 0, 0.12);
-    --glass-shadow: rgba(0, 0, 0, 0.06);
+    --glass-bg: rgba(248, 250, 252, 0.8);
+    --glass-border: rgba(148, 163, 184, 0.3);
+    --glass-shadow: rgba(0, 0, 0, 0.08);
     
     --nav-bg: rgba(255, 255, 255, 0.95);
     
-    --card-bg: rgba(255, 255, 255, 0.95);
-    --card-border: rgba(0, 0, 0, 0.15);
+    --card-bg: rgba(248, 250, 252, 0.9);
+    --card-border: rgba(148, 163, 184, 0.35);
+    
+    /* Shadows for light mode */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+    --shadow-glow: 0 0 24px var(--primary-glow);
 }
 
 /* ======================================
@@ -193,7 +209,7 @@ a {
 .logo {
     font-size: var(--font-xl);
     font-weight: 800;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
     background-clip: text;
@@ -290,7 +306,7 @@ a {
 }
 
 .hero-text h1 {
-    font-size: 4rem;
+    font-size: var(--font-hero);
     line-height: 1.1;
     margin-bottom: 20px;
     letter-spacing: -1.5px;
@@ -353,8 +369,8 @@ a {
 
 .btn:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 30px -10px var(--primary-glow);
-    background: var(--secondary);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    filter: brightness(1.1);
 }
 
 .btn2 {
