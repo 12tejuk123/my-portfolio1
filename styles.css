@@ -1704,7 +1704,7 @@ section {
 }
 
 .project-card-pro p {
-    color: #d8d8d8;
+    color: var(--text-secondary);
     font-size: 0.95rem;
 }
 
@@ -1785,15 +1785,15 @@ section {
     padding: 12px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #aaa;
-    color: white;
+    border-bottom: 2px solid var(--glass-border);
+    color: var(--text-main);
 }
 
 .input-box label {
     position: absolute;
     top: 10px;
     left: 0;
-    color: #aaa;
+    color: var(--text-muted);
     transition: 0.3s;
 }
 
@@ -1803,20 +1803,23 @@ section {
 .input-box textarea:valid + label {
     top: -10px;
     font-size: 0.8rem;
-    color: #6c5ce7;
+    color: var(--primary);
 }
 
 .send-btn {
     padding: 12px 20px;
-    background: #6c5ce7;
+    background: var(--primary);
     border-radius: 10px;
     border: none;
-    color: white;
+    color: #ffffff;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .send-btn:hover {
-    background: #4d3acd;
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--primary-glow);
 }
 
 /* ======================================
@@ -1832,7 +1835,7 @@ section {
 .project-detail h1 {
     font-size: 2.4rem;
     margin-bottom: 20px;
-    color: #87b9ff;
+    color: var(--primary);
 }
 
 /* ======================================
