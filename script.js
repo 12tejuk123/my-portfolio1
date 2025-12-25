@@ -1,51 +1,64 @@
-// Sequential Typing Function
-function typeText(element, text, delay = 50, callback = null) {
-    let i = 0;
-    function typing() {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(typing, delay);
-        } else if (callback) {
-            setTimeout(callback, 400);
-        }
-    }
-    typing();
-}
+// TYPING EFFECT
+const typingText = [
+    "Web Developer",
+    "AI Enthusiast",
+    "UI/UX Designer",
+    "Tech Innovator"
+];
 
-// Apply typing to multiple elements in order
-window.onload = () => {
-    const elements = [
-        { selector: ".type-1", text: "Hi, I'm Tejaswini Kulkarni" },
-        { selector: ".type-2", text: "Web Developer | AI Enthusiast | Designer" },
-        { selector: ".type-3", text: "About Me" },
-        { selector: ".type-4", text: "Skills" },
-        { selector: ".type-5", text: "My Projects" },
-        { selector: ".type-6", text: "Contact Me" }
-    ];
+const typingElement = document.querySelector(".typing-container");
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-    let index = 0;
-
-    function startTyping() {
-        if (index >= elements.length) return;
-
-        const el = document.querySelector(elements[index].selector);
-        el.textContent = ""; // clear old text
-        typeText(el, elements[index].text, 45, () => {
-            index++;
-            startTyping();
-        });
+function typeEffect() {
+    const currentText = typingText[textIndex];
+    
+    if (isDeleting) {
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typingElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
     }
 
-    startTyping();
-};
-
-// DARK MODE
-function toggleDarkMode() {
-    document.body.classList.toggle("dark");
+    if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 2000); // Wait before deleting
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % typingText.length;
+        setTimeout(typeEffect, 500); // Wait before typing next
+    } else {
+        setTimeout(typeEffect, isDeleting ? 100 : 200); // Speed of typing/deleting
+    }
 }
 
-// MOBILE MENU
+// Start typing effect on load
+document.addEventListener("DOMContentLoaded", () => {
+    if (typingElement) typeEffect();
+});
+
+
+// MOBILE MENU TOGGLE
 function toggleMenu() {
-    document.getElementById("navMenu").classList.toggle("show-menu");
+    const navMenu = document.getElementById("navMenu");
+    navMenu.classList.toggle("active");
 }
+
+function closeMenu() {
+    const navMenu = document.getElementById("navMenu");
+    if (navMenu.classList.contains("active")) {
+        navMenu.classList.remove("active");
+    }
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    const navMenu = document.getElementById("navMenu");
+    const hamburger = document.querySelector(".hamburger");
+    
+    if (!navMenu.contains(e.target) && !hamburger.contains(e.target) && navMenu.classList.contains("active")) {
+        navMenu.classList.remove("active");
+    }
+});

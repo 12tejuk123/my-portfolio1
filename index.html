@@ -3,215 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tejaswini Portfolio</title>
+    <title>Tejaswini Kulkarni | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- NAVBAR -->
     <nav class="navbar glass">
-        <div class="logo type">Tejaswini Kulkarni</div>
+        <div class="logo">Tejaswini Kulkarni</div>
 
-        <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
-
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <!-- Mobile Menu Toggle -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
 
         <ul class="nav-links" id="navMenu">
-            <li><a href="#hero" class="type">Home</a></li>
-            <li><a href="#about" class="type">About</a></li>
-            <li><a href="#skills" class="type">Skills</a></li>
-            <li><a href="#projects" class="type">Projects</a></li>
-            <li><a href="#contact" class="type">Contact</a></li>
+            <li><a href="#hero" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+            <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
         </ul>
     </nav>
 
     <!-- HERO SECTION -->
     <section id="hero">
-        <img src="your-photo.jpg" class="profile-img">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <br> Tejaswini Kulkarni</h1>
+                <div class="typing-container"></div>
+                
+                <p>
+                    Passionate about crafting modern websites, AI-based applications, 
+                    and creating intuitive digital experiences that make a difference.
+                </p>
 
-        <div class="hero-text">
-            <h1 class="type">Hi, I'm Tejaswini Kulkarni</h1>
-            <h2 class="typing"></h2>
-
-            <p class="fade">
-                Passionate about crafting modern websites, AI-based applications, 
-                and intuitive digital experiences.
-            </p>
-
-            <div class="buttons fade">
-                <a href="#projects" class="btn type">View Projects</a>
-                <a href="#contact" class="btn2 type">Contact Me</a>
+                <div class="buttons">
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="#contact" class="btn2">Contact Me</a>
+                </div>
             </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="your-photo.jpg" alt="Tejaswini Kulkarni" class="profile-img">
         </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="glass slide">
-        <h3 class="type">About Me</h3>
-        <p class="fade">
-            I am a passionate web developer and AI enthusiast with experience in building 
-            smart systems, user-friendly websites, and modern UI designs.
-        </p>
-        <button class="about-btn type">Download Resume</button>
+    <section id="about">
+        <h3 class="section-title">About Me</h3>
+        <div class="about-content glass">
+            <p>
+                I am a passionate web developer and AI enthusiast with experience in building 
+                smart systems, user-friendly websites, and modern UI designs. I love bridging 
+                the gap between complex AI logic and intuitive user interfaces.
+            </p>
+            <button class="about-btn">Download Resume</button>
+        </div>
     </section>
 
-   <section id="skills" class="glass new-section">
-    <h3 class="section-title">Skills</h3>
+    <!-- SKILLS -->
+    <section id="skills">
+        <h3 class="section-title">My Skills</h3>
 
-    <div class="skills-grid">
-
-        <div class="skill-item">
-            <div class="skill-icon">💻</div>
-            <h4>HTML</h4>
-            <p>Expert</p>
-        </div>
-
-        <div class="skill-item">
-            <div class="skill-icon">🎨</div>
-            <h4>CSS</h4>
-            <p>Advanced</p>
-        </div>
-
-        <div class="skill-item">
-            <div class="skill-icon">⚡</div>
-            <h4>JavaScript</h4>
-            <p>Intermediate</p>
-        </div>
-
-        <div class="skill-item">
-            <div class="skill-icon">🐍</div>
-            <h4>Python</h4>
-            <p>Advanced</p>
-        </div>
-
-        <div class="skill-item">
-            <div class="skill-icon">🤖</div>
-            <h4>AI / ML</h4>
-            <p>Intermediate</p>
-        </div>
-
-    </div>
-</section>
-<section id="projects" class="projects-section">
-    <h3 class="section-title">My Projects</h3>
-
-    <div class="projects-grid">
-
-        <a href="projects/archition.html" class="project-card-pro">
-            <div class="project-icon-pro">🏛️</div>
-            <h4>Archition</h4>
-            <p>AI-powered Architectural Design System</p>
-        </a>
-
-        <a href="projects/dreamai.html" class="project-card-pro">
-            <div class="project-icon-pro">🌙</div>
-            <h4>DreamAI</h4>
-            <p>AI-based Dream Interpretation Engine</p>
-        </a>
-
-        <a href="projects/cognitolearn.html" class="project-card-pro">
-            <div class="project-icon-pro">📚</div>
-            <h4>CognitoLearn</h4>
-            <p>AI Study & Abroad Preparation Platform</p>
-        </a>
-
-        <a href="projects/verticalfarm.html" class="project-card-pro">
-            <div class="project-icon-pro">🌱</div>
-            <h4>Vertical Farming System</h4>
-            <p>AI + IoT Smart Agriculture</p>
-        </a>
-
-        <a href="projects/wastebin.html" class="project-card-pro">
-            <div class="project-icon-pro">🗑️</div>
-            <h4>Smart Waste Bin</h4>
-            <p>IoT-based Waste Management Automation</p>
-        </a>
-
-        <a href="projects/surveillance.html" class="project-card-pro">
-            <div class="project-icon-pro">📸</div>
-            <h4>Smart Surveillance</h4>
-            <p>AI-powered Motion Detection System</p>
-        </a>
-
-        <a href="projects/AI Quest Generator.html" class="project-card-pro">
-            <div class="project-icon-pro">🎮</div>
-            <h4>AI Quest Generator</h4>
-            <p>AI-Powered Story & Quest Generator</p>
-        </a>
-
-        <a href="projects/Ayushya AI.html" class="project-card-pro">
-            <div class="project-icon-pro">🏥</div>
-            <h4>Ayushya AI</h4>
-            <p>AI Doctor Assistance App</p>
-        </a>
-
-        <a href="projects/BMI Index Calculator.html" class="project-card-pro">
-            <div class="project-icon-pro">⚖️</div>
-            <h4>BMI Calculator</h4>
-            <p>Body Mass Index & Health Calculator</p>
-        </a>
-
-        <a href="projects/Artifical Large Intestine.html" class="project-card-pro">
-            <div class="project-icon-pro">🧫</div>
-            <h4>Artificial Intestine</h4>
-            <p>Biomedical Intestine Replacement System</p>
-        </a>
-
-        <a href="projects/SkillMatch.html" class="project-card-pro">
-            <div class="project-icon-pro">🤖</div>
-            <h4>AI SkillMatch</h4>
-            <p>AI-based Career Skill Matching System</p>
-        </a>
-
-        <a href="projects/SoloFit Tracker.html" class="project-card-pro">
-            <div class="project-icon-pro">🏋️‍♀️</div>
-            <h4>SoloFit Tracker</h4>
-            <p>AI Fitness Tracking & Goal Coach</p>
-        </a>
-
-    </div>
-</section>
-
-<section id="contact" class="glass new-section">
-
-    <h3 class="section-title">Contact Me</h3>
-
-    <div class="contact-container">
-
-        <div class="contact-info">
-            <h4>Let's Connect</h4>
-            <p>Email: tejaswini2504@gmail.com</p>
-            <p>LinkedIn: /tejaswini-kulkarni</p>
-            <p>GitHub: /12tejuk123</p>
-        </div>
-
-        <form class="contact-form">
-            <div class="input-box">
-                <input type="text" required>
-                <label>Name</label>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <i class="fab fa-html5 skill-icon" style="color: #e34c26;"></i>
+                <h4>HTML5</h4>
+                <p>Expert</p>
             </div>
 
-            <div class="input-box">
-                <input type="email" required>
-                <label>Email</label>
+            <div class="skill-item">
+                <i class="fab fa-css3-alt skill-icon" style="color: #264de4;"></i>
+                <h4>CSS3</h4>
+                <p>Advanced</p>
             </div>
 
-            <div class="input-box">
-                <textarea required></textarea>
-                <label>Message</label>
+            <div class="skill-item">
+                <i class="fab fa-js skill-icon" style="color: #f0db4f;"></i>
+                <h4>JavaScript</h4>
+                <p>Intermediate</p>
             </div>
 
-            <button class="send-btn">Send Message</button>
-        </form>
+            <div class="skill-item">
+                <i class="fab fa-python skill-icon" style="color: #3776ab;"></i>
+                <h4>Python</h4>
+                <p>Advanced</p>
+            </div>
 
-    </div>
-</section>
+            <div class="skill-item">
+                <i class="fas fa-brain skill-icon" style="color: #00a8ff;"></i>
+                <h4>AI / ML</h4>
+                <p>Intermediate</p>
+            </div>
+            
+            <div class="skill-item">
+                <i class="fas fa-database skill-icon" style="color: #00cec9;"></i>
+                <h4>Data Science</h4>
+                <p>Intermediate</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h3 class="section-title">Featured Projects</h3>
+
+        <div class="projects-grid">
+
+            <a href="projects/archition.html" class="project-card-pro">
+                <div class="project-icon-pro">🏛️</div>
+                <div>
+                    <h4>Archition</h4>
+                    <p>AI-powered Architectural Design System for smarter building planning.</p>
+                </div>
+            </a>
+
+            <a href="projects/dreamai.html" class="project-card-pro">
+                <div class="project-icon-pro">🌙</div>
+                <div>
+                    <h4>DreamAI</h4>
+                    <p>AI-based Dream Interpretation Engine to analyze subconscious thoughts.</p>
+                </div>
+            </a>
+
+            <a href="projects/cognitolearn.html" class="project-card-pro">
+                <div class="project-icon-pro">📚</div>
+                <div>
+                    <h4>CognitoLearn</h4>
+                    <p>Comprehensive AI Platform for Study & Abroad Preparation.</p>
+                </div>
+            </a>
+
+            <a href="projects/verticalfarm.html" class="project-card-pro">
+                <div class="project-icon-pro">🌱</div>
+                <div>
+                    <h4>Vertical Farming</h4>
+                    <p>IoT-based Smart Agriculture system for maximizing crop yield.</p>
+                </div>
+            </a>
+
+            <a href="projects/wastebin.html" class="project-card-pro">
+                <div class="project-icon-pro">🗑️</div>
+                <div>
+                    <h4>Smart Waste Bin</h4>
+                    <p>IoT-based Waste Management Automation for cleaner cities.</p>
+                </div>
+            </a>
+
+            <a href="projects/surveillance.html" class="project-card-pro">
+                <div class="project-icon-pro">📸</div>
+                <div>
+                    <h4>Smart Surveillance</h4>
+                    <p>AI-powered Motion Detection System for enhanced security.</p>
+                </div>
+            </a>
+
+            <a href="projects/ai-quest-generator.html" class="project-card-pro">
+                <div class="project-icon-pro">🎮</div>
+                <div>
+                    <h4>AI Quest Generator</h4>
+                    <p>Dynamic AI-Powered Story & Quest Generator for RPG games.</p>
+                </div>
+            </a>
+
+            <a href="projects/ayushya-ai.html" class="project-card-pro">
+                <div class="project-icon-pro">🏥</div>
+                <div>
+                    <h4>Ayushya AI</h4>
+                    <p>AI Doctor Assistance App for preliminary diagnosis.</p>
+                </div>
+            </a>
+
+            <a href="projects/bmi-calculator.html" class="project-card-pro">
+                <div class="project-icon-pro">⚖️</div>
+                <div>
+                    <h4>BMI Calculator</h4>
+                    <p>Simple yet effective Body Mass Index & Health Calculator.</p>
+                </div>
+            </a>
+
+            <a href="projects/artificial-intestine.html" class="project-card-pro">
+                <div class="project-icon-pro">🧫</div>
+                <div>
+                    <h4>Artificial Intestine</h4>
+                    <p>Biomedical Intestine Replacement System concept.</p>
+                </div>
+            </a>
+
+            <a href="projects/skillmatch.html" class="project-card-pro">
+                <div class="project-icon-pro">🤖</div>
+                <div>
+                    <h4>AI SkillMatch</h4>
+                    <p>AI-based Career Skill Matching System for job seekers.</p>
+                </div>
+            </a>
+
+            <a href="projects/solofit-tracker.html" class="project-card-pro">
+                <div class="project-icon-pro">🏋️‍♀️</div>
+                <div>
+                    <h4>SoloFit Tracker</h4>
+                    <p>Personalized AI Fitness Tracking & Goal Coach.</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h3 class="section-title">Get In Touch</h3>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h4>Let's Connect</h4>
+                <p><i class="fas fa-envelope"></i> tejaswini2504@gmail.com</p>
+                <p><i class="fab fa-linkedin"></i> linkedin.com/in/tejaswini-kulkarni</p>
+                <p><i class="fab fa-github"></i> github.com/12tejuk123</p>
+            </div>
+
+            <form class="contact-form">
+                <div class="input-box">
+                    <input type="text" required>
+                    <label>Your Name</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" required>
+                    <label>Your Email</label>
+                </div>
+
+                <div class="input-box">
+                    <textarea required></textarea>
+                    <label>Your Message</label>
+                </div>
+
+                <button class="send-btn">Send Message</button>
+            </form>
+
+        </div>
+    </section>
 
     <!-- FOOTER -->
-    <footer class="type">© 2025 Tejaswini Kulkarni</footer>
+    <footer>
+        <p>&copy; 2025 Tejaswini Kulkarni. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 
 </body>
 </html>
+
+
