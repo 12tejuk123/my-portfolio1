@@ -68,18 +68,31 @@ const themeToggle = document.getElementById("theme-toggle");
 const htmlElement = document.documentElement;
 const themeIcon = themeToggle.querySelector("i");
 
-// Check local storage for theme
-const savedTheme = localStorage.getItem("theme") || "dark";
-htmlElement.setAttribute("data-theme", savedTheme);
-updateThemeIcon(savedTheme);
+// Check local storage for theme (default is dark)
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "light") {
+    htmlElement.setAttribute("data-theme", "light");
+    updateThemeIcon("light");
+} else {
+    // Dark mode: remove attribute to use :root defaults
+    htmlElement.removeAttribute("data-theme");
+    updateThemeIcon("dark");
+}
 
 themeToggle.addEventListener("click", () => {
-    const currentTheme = htmlElement.getAttribute("data-theme");
-    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    const isLight = htmlElement.hasAttribute("data-theme") && htmlElement.getAttribute("data-theme") === "light";
     
-    htmlElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-    updateThemeIcon(newTheme);
+    if (isLight) {
+        // Switch to dark
+        htmlElement.removeAttribute("data-theme");
+        localStorage.setItem("theme", "dark");
+        updateThemeIcon("dark");
+    } else {
+        // Switch to light
+        htmlElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+        updateThemeIcon("light");
+    }
 });
 
 function updateThemeIcon(theme) {
