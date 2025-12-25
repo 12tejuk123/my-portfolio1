@@ -246,6 +246,13 @@ a {
     box-shadow: 0 0 15px var(--primary-glow);
 }
 
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 .nav-links {
     display: flex;
     gap: 40px;
@@ -839,11 +846,9 @@ footer {
 ====================================== */
 .project-wrapper {
     padding-top: 120px;
-    max-width: 1000px;
+    width: 70%;
     margin: 0 auto;
     padding-bottom: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .project-header {
@@ -925,4 +930,15 @@ footer {
 .back-link:hover {
     color: var(--primary);
     transform: translateX(-5px);
+}
+
+@media (max-width: 1024px) {
+    .project-wrapper {
+        width: 90%;
+        padding-top: 100px;
+    }
+    
+    .project-title-large {
+        font-size: 2.5rem;
+    }
 }

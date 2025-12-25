@@ -12,14 +12,25 @@
     <!-- NAVBAR -->
     <nav class="navbar glass">
         <a href="../index.html" class="logo">Tejaswini Kulkarni</a>
-        
+
         <div class="nav-content">
-            <a href="../index.html" class="back-link" style="margin-bottom: 0;">&larr; Back to Portfolio</a>
-            
+            <ul class="nav-links" id="navMenu">
+                <li><a href="../index.html#hero" onclick="closeMenu()">Home</a></li>
+                <li><a href="../index.html#about" onclick="closeMenu()">About</a></li>
+                <li><a href="../index.html#skills" onclick="closeMenu()">Skills</a></li>
+                <li><a href="../index.html#projects" onclick="closeMenu()">Projects</a></li>
+                <li><a href="../index.html#contact" onclick="closeMenu()">Contact</a></li>
+            </ul>
+
             <div class="nav-actions">
                 <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
                     <i class="fas fa-moon"></i>
                 </button>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </nav>
