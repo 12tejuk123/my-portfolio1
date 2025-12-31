@@ -446,6 +446,7 @@ section {
     padding: 120px 5%;
     max-width: 1400px;
     margin: 0 auto;
+    background: transparent;
 }
 
 .section-title {
@@ -493,6 +494,90 @@ section {
     background: var(--primary);
     color: #fff;
     box-shadow: 0 10px 25px -10px var(--primary-glow);
+}
+
+/* Social Links in Nav */
+.social-links-nav {
+    display: flex;
+    gap: 15px;
+    margin-right: 15px;
+}
+
+.social-links-nav a {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    transition: var(--transition-bounce);
+}
+
+.social-links-nav a:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Skills Section V2 */
+.skills-container-v2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.skill-category {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    transition: var(--transition-base);
+}
+
+.skill-category:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.skill-category h4 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--primary);
+}
+
+.skills-grid-v2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-pill {
+    padding: 8px 18px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-pill);
+    font-size: var(--font-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: var(--transition-fast);
+}
+
+.skill-pill:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    box-shadow: 0 5px 15px var(--primary-glow);
+}
+
+/* Reveal on Scroll Initial State */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ======================================
@@ -558,19 +643,20 @@ section {
     border: 1px solid var(--card-border);
     padding: 40px;
     border-radius: 24px;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     flex-direction: column;
     gap: 20px;
     text-align: left;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 
 .project-card-pro:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px) scale(1.02);
     border-color: var(--primary);
-    box-shadow: 0 20px 40px -15px var(--glass-shadow);
+    box-shadow: 0 20px 40px -15px var(--glass-shadow), 0 0 20px var(--primary-glow);
 }
 
 .project-card-pro::before {
@@ -842,6 +928,7 @@ footer {
 
 
 
+/* ======================================
    PROJECT DETAIL PAGES
 ====================================== */
 .project-wrapper {

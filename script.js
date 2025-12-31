@@ -63,6 +63,26 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// Mobile Menu
+window.toggleMenu = () => document.getElementById("navMenu").classList.toggle("active");
+window.closeMenu = () => document.getElementById("navMenu").classList.remove("active");
+
+// SCROLL REVEAL ANIMATION
+const reveal = () => {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(element => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add('active');
+        }
+    });
+};
+
+window.addEventListener('scroll', reveal);
+reveal(); // Initial check
+
 // THEME TOGGLE
 const themeToggle = document.getElementById("theme-toggle");
 const htmlElement = document.documentElement;
