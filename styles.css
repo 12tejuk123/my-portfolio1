@@ -610,6 +610,14 @@ section {
     font-weight: 600;
     color: var(--text-secondary);
     transition: var(--transition-fast);
+    font-family: var(--font-mono);
+}
+
+.skill-pill::before {
+    content: '--';
+    color: var(--primary);
+    opacity: 0.7;
+    margin-right: 4px;
 }
 
 .skill-pill:hover {
