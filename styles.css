@@ -4,28 +4,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-    /* Modern Professional Dark Theme */
-    --bg-main: #0F172A;
-    --bg-secondary: #1E293B;
-    --primary: #5B8DEF;
-    --primary-glow: rgba(91, 141, 239, 0.3);
-    --secondary: #10B981;
-    --secondary-glow: rgba(16, 185, 129, 0.3);
-    --accent: #F59E0B;
+    /* Modern Monochrome Dark Theme */
+    --bg-main: #000000;
+    --bg-secondary: #0A0A0A;
+    --primary: #FFFFFF;
+    --primary-glow: rgba(255, 255, 255, 0.2);
+    --secondary: #E0E0E0;
+    --secondary-glow: rgba(224, 224, 224, 0.2);
+    --accent: #FFFFFF;
     
-    --text-main: #F1F5F9;
-    --text-secondary: #94A3B8;
-    --text-muted: #64738B;
+    --text-main: #FFFFFF;
+    --text-secondary: #CCCCCC;
+    --text-muted: #888888;
     
-    --glass-bg: rgba(30, 41, 59, 0.5);
-    --glass-border: rgba(148, 163, 184, 0.2);
-    --glass-shadow: rgba(0, 0, 0, 0.3);
+    --glass-bg: rgba(15, 15, 15, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-shadow: rgba(0, 0, 0, 0.5);
     
-    --nav-bg: rgba(15, 23, 42, 0.9);
+    --nav-bg: rgba(0, 0, 0, 0.9);
     
-    --card-bg: rgba(30, 41, 59, 0.6);
-    --card-border: rgba(148, 163, 184, 0.25);
+    --card-bg: rgba(10, 10, 10, 0.9);
+    --card-border: rgba(255, 255, 255, 0.1);
     
+    --gradient-primary: linear-gradient(135deg, #FFFFFF, #888888);
+    --gradient-accent: linear-gradient(135deg, #E0E0E0, #444444);
+    
+    /* Gradients */
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
     
@@ -61,10 +65,6 @@
     --transition-base: 0.3s ease;
     --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #5B8DEF, #10B981);
-    --gradient-accent: linear-gradient(135deg, #F59E0B, #EF4444);
     
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -109,8 +109,8 @@
 }
 
 [data-theme="dark"] {
-    --skeleton-bg: #1E293B;
-    --skeleton-shimmer: linear-gradient(90deg, #1E293B 25%, #334155 50%, #1E293B 75%);
+    --skeleton-bg: #1A1A1A;
+    --skeleton-shimmer: linear-gradient(90deg, #1A1A1A 25%, #333333 50%, #1A1A1A 75%);
 }
 
 /* Skeleton Loading Effect */
