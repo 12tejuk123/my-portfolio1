@@ -1,7 +1,4 @@
-/* ======================================
-   GLOBAL IMPORTS & VARIABLES
-====================================== */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 :root {
     /* Modern Monochrome Dark Theme */
@@ -26,12 +23,15 @@
     --card-bg: rgba(10, 10, 10, 0.9);
     --card-border: rgba(255, 255, 255, 0.1);
     
+    --btn-text: #000000;
+    
     --gradient-primary: linear-gradient(135deg, #FFFFFF, #888888);
     --gradient-accent: linear-gradient(135deg, #E0E0E0, #444444);
     
     /* Gradients */
-    --font-heading: 'Outfit', sans-serif;
+    --font-heading: 'JetBrains Mono', monospace;
     --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
     
     /* Typography Scale */
     --font-xs: 0.85rem;
@@ -95,6 +95,8 @@
     
     --card-bg: rgba(245, 241, 233, 0.9);
     --card-border: rgba(93, 64, 55, 0.1);
+    
+    --btn-text: #FFFFFF;
     
     --gradient-primary: linear-gradient(135deg, #5D4037, #A67B5B);
     
@@ -400,7 +402,7 @@ a {
 
 .btn {
     background: var(--primary);
-    color: #ffffff;
+    color: var(--btn-text);
     border: none;
     box-shadow: 0 10px 20px -10px var(--primary-glow);
 }
@@ -484,13 +486,31 @@ section {
     font-size: 2.8rem;
     text-align: center;
     margin-bottom: 70px;
-    font-weight: 800;
-    background: linear-gradient(to right, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -1px;
+    font-weight: 700;
+    color: var(--primary);
+    background: transparent;
+    -webkit-text-fill-color: initial;
+    letter-spacing: -0.5px;
     position: relative;
+    font-family: var(--font-mono);
+}
+
+.section-title::before {
+    content: '>_ ';
+    color: var(--secondary);
+    opacity: 0.8;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
 }
 
 /* ======================================
@@ -523,7 +543,7 @@ section {
 
 .about-btn:hover {
     background: var(--primary);
-    color: #fff;
+    color: var(--btn-text);
     box-shadow: 0 10px 25px -10px var(--primary-glow);
 }
 
@@ -724,6 +744,17 @@ section {
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--text-main);
+    font-family: var(--font-mono);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-card-pro h4::before {
+    content: '$';
+    color: var(--primary);
+    font-size: 1.2rem;
+    opacity: 0.6;
 }
 
 .project-card-pro p {
@@ -1027,7 +1058,7 @@ footer {
 
 .tech-badge {
     padding: 8px 20px;
-    background: rgba(255,255,255,0.05);
+    background: var(--card-bg);
     border: 1px solid var(--glass-border);
     border-radius: 50px;
     color: var(--primary);
@@ -1043,11 +1074,17 @@ footer {
     font-weight: 600;
     margin-bottom: 40px;
     transition: 0.3s;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: var(--radius-pill);
+    border: 1px solid transparent;
 }
 
 .back-link:hover {
     color: var(--primary);
     transform: translateX(-5px);
+    border-color: var(--primary);
+    background: var(--card-bg);
 }
 
 @media (max-width: 1024px) {
