@@ -759,7 +759,7 @@ section {
 }
 
 .project-card-pro h4::before {
-    content: ' ';
+    content: '$';
     color: var(--primary);
     font-size: 1.2rem;
     opacity: 0.6;
